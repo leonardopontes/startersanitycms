@@ -4,14 +4,14 @@ import { urlForImage } from '~/lib/sanity.image'
 import { type Post } from '~/lib/sanity.queries'
 import { formatDate } from '~/utils'
 
-export default function Card({ post }: { post: Post }) {
+export default function Card2({ post }: { post: Post }) {
   return (
     <div className="w-1/2">
       {post.mainImage ? (
         <Image
           className="card__cover"
-          src={urlForImage(post.mainImage).width(800).height(600).url()}
-          height={600}
+          src={urlForImage(post.mainImage).width(800).height(200).url()}
+          height={200}
           width={800}
           alt=""
         />
