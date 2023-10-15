@@ -27,11 +27,13 @@ export default defineType({
       rows: 4,
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: 'gallery',
+      type: 'array',
+      of: [
+        { type: 'image' }
+      ],
       options: {
-        hotspot: true,
+        layout: 'grid'
       },
     }),
     defineField({

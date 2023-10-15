@@ -2,7 +2,6 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useLiveQuery } from 'next-sanity/preview'
 
 import Card from '~/components/Card'
-import Card2 from '~/components/Card2'
 import Container from '~/components/Container'
 import Welcome from '~/components/Welcome'
 import { readToken } from '~/lib/sanity.api'
@@ -36,11 +35,6 @@ export default function IndexPage(
       <section>
         {posts.length ? (
           posts.map((post) => <Card key={post._id} post={post} />)
-        ) : (
-          <Welcome />
-        )}
-        {posts.length ? (
-          posts.map((post) => <Card2 key={post._id} post={post} />)
         ) : (
           <Welcome />
         )}
