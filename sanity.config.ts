@@ -20,14 +20,20 @@ import {
   projectId,
 } from '~/lib/sanity.api'
 import { schema } from '~/schemas'
-
+// Opções iframe ligando a = {
 const iframeOptions = {
+  // url: definir Resolvedor de Url, contendo({
   url: defineUrlResolver({
+    // base: 'api/draft',
     base: '/api/draft',
+    // exigir Slug: ['publicar'],
     requiresSlug: ['post'],
   }),
+  // url Secreta com Id: visualização Secreta com Id,
   urlSecretId: previewSecretId,
+  // recarregar: { botão: verdadeiro },
   reload: { button: true },
+// } satisfazer Opções Iframe  
 } satisfies IframeOptions
 
 export default defineConfig({
