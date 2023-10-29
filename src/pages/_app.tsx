@@ -3,12 +3,13 @@ import '~/styles/global.css'
 import type { AppProps } from 'next/app'
 import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
 import { lazy } from 'react'
-
+// interface CompartilharPropriedadesPágina {
 export interface SharedPageProps {
+  // Modorascunho: booleano
   draftMode: boolean
   token: string
 }
-
+// VisualizarProvedor = lento(() contendo => import('~/components/PreviewProvider'))
 const PreviewProvider = lazy(() => import('~/components/PreviewProvider'))
 
 const mono = IBM_Plex_Mono({
@@ -29,11 +30,9 @@ const serif = PT_Serif({
   subsets: ['latin'],
   weight: ['400', '700'],
 })
-
-export default function App({
-  Component,
-  pageProps,
-}: AppProps<SharedPageProps>) {
+// função do App({ Component, pagePropriedades,}: AppPropriedades<CompartilharPropriedadesdaPágina>) {
+export default function App({ Component, pageProps,}: AppProps<SharedPageProps>) {
+  // { Modorascunho, token } = pagePropriedades
   const { draftMode, token } = pageProps
   return (
     <>
