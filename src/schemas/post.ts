@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity'
-
+// Tipos responsáveis por gerar o conteúdo CMS a ser exibido pela página. Na Documentação SanityCMS deve ter mais tipos para personalizar mais ainda a página
+// Ex: Cada parte da página pode ter Arquivos com tipos específicos. aqui é relacionado a post, arquivo post.ts
 export default defineType({
   name: 'post',
   title: 'Post',
